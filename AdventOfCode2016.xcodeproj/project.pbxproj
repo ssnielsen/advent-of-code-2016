@@ -44,7 +44,6 @@
 		4539CB371DF0B8A800644D72 = {
 			isa = PBXGroup;
 			children = (
-				4539CB571DF0BA4600644D72 /* Tests */,
 				4539CB561DF0BA3100644D72 /* Input */,
 				4539CB421DF0B8A900644D72 /* Source */,
 				4539CB411DF0B8A900644D72 /* Products */,
@@ -75,13 +74,6 @@
 				4539CB5A1DF0BC7600644D72 /* 1 */,
 			);
 			name = Input;
-			sourceTree = "<group>";
-		};
-		4539CB571DF0BA4600644D72 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +265,7 @@
 				4539CB491DF0B8A900644D72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
