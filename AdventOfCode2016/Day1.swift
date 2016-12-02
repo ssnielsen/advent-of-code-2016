@@ -12,16 +12,16 @@ struct Day1 {
     func run(with input: String) -> (part1: Int, part2: Int?) {
         let instructions = map(from: input)
         let result = compute(with: instructions)
-        
+
         return result
     }
-    
+
     func compute(with instructions: [Instruction]) -> (part1: Int, part2: Int?) {
         var position = Coordinate(x: 0, y: 0)
         var direction = Direction.north
         var history = [position]
         var part2: Int? = nil
-        
+
         for instruction in instructions {
             switch instruction {
             case .rotate(let rotation):
@@ -29,7 +29,10 @@ struct Day1 {
             case .walk(let distance):
                 for _ in 0..<distance {
                     let newPosition = walk(from: position, in: direction)
-                    if (part2 == nil && history.contains(where: { $0.x == newPosition.x && $0.y == newPosition.y })) {
+                    let hereBefore = history.contains {
+                        $0.x == newPosition.x && $0.y == newPosition.y
+                    }
+                    if part2 == nil && hereBefore {
                         part2 = self.distance(from: newPosition)
                     }
                     position = newPosition
@@ -37,14 +40,14 @@ struct Day1 {
                 }
             }
         }
-        
+
         return (part1: distance(from: position), part2: part2)
     }
-    
+
     func distance(from position: Coordinate) -> Int {
         return abs(position.x) + abs(position.y)
     }
-    
+
     func rotate(with rotation: Rotation, while direction: Direction) -> Direction {
         switch (direction, rotation) {
         case (.east, .left),
@@ -61,20 +64,20 @@ struct Day1 {
             return .west
         }
     }
-    
+
     func walk(from position: Coordinate, in direction: Direction) -> Coordinate {
         var newPosition = position
-        
+
         switch direction {
         case .east:  newPosition.x += 1
         case .south: newPosition.y -= 1
         case .west:  newPosition.x -= 1
         case .north: newPosition.y += 1
         }
-        
+
         return newPosition
     }
-    
+
     func map(from input: String) -> [Instruction] {
         let splitted = input.components(separatedBy: ",")
         let untyped = splitted.map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
@@ -85,23 +88,23 @@ struct Day1 {
             let walking = Instruction.walk(distance: distance)
             return [rotationInstruction, walking]
         }.flatMap { $0 }
-        
+
         return typed
     }
-    
+
     enum Instruction {
         case walk(distance: Int)
         case rotate(rotation: Rotation)
     }
-    
+
     enum Rotation {
         case left, right
     }
-    
+
     enum Direction {
         case east, south, west, north
     }
-    
+
     struct Coordinate {
         var x: Int
         var y: Int

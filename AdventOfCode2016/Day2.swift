@@ -11,14 +11,14 @@ import Foundation
 struct Day2 {
     func run(with input: String) -> (part1: String, part2: String?) {
         let splitted = input.components(separatedBy: .newlines).filter { !$0.isEmpty }
-        
+
         return (part1: part1(with: splitted), part2: nil)
     }
-    
+
     func part1(with input: [String]) -> String {
         var code = ""
         var finger = 5
-        
+
         for line in input {
             for instruction in line.characters {
                 switch instruction {
@@ -31,7 +31,7 @@ struct Day2 {
             }
             code += String(finger)
         }
-        
+
         return code
     }
 }
