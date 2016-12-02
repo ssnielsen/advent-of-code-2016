@@ -10,7 +10,8 @@ import Foundation
 
 func loadInput(for day: Int) -> String? {
     do {
-        let input = try String(contentsOfFile: "/Users/Soren/Developer/AdventOfCode2016/Input/\(day)", encoding: .utf8)
+        //let input = try String(contentsOfFile: "/Users/Soren/Developer/AdventOfCode2016/Input/\(day)", encoding: .utf8)
+        let input = try String(contentsOfFile: "/Users/soren/econ-source/advent-of-code-2016/Input/\(day)", encoding: .utf8)
         return input
     } catch {
         print(error)
@@ -18,7 +19,7 @@ func loadInput(for day: Int) -> String? {
     }
 }
 
-let input = loadInput(for: 1)!
-//let input = "R8, R4, R4, R8"
-let result = Day1().run(with: input)
+let input = loadInput(for: 2)!
+//let input = "ULL\nRRDDD\nLURDL\nUUUUD"
+let result = Day2().run(with: input)
 print(result)
