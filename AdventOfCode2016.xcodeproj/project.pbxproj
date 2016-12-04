@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4539CB441DF0B8A900644D72 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539CB431DF0B8A900644D72 /* main.swift */; };
 		4539CB591DF0BA7900644D72 /* Day1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539CB581DF0BA7900644D72 /* Day1.swift */; };
+		4539CB731DF4089C00644D72 /* Day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539CB721DF4089C00644D72 /* Day3.swift */; };
 		4579ECC11DF17AEC00CC88D8 /* Day2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4579ECC01DF17AEC00CC88D8 /* Day2.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,8 @@
 		4539CB431DF0B8A900644D72 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		4539CB581DF0BA7900644D72 /* Day1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day1.swift; sourceTree = "<group>"; };
 		4539CB5A1DF0BC7600644D72 /* 1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 1; path = Input/1; sourceTree = "<group>"; };
+		4539CB711DF4085D00644D72 /* 3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 3; path = Input/3; sourceTree = "<group>"; };
+		4539CB721DF4089C00644D72 /* Day3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day3.swift; sourceTree = "<group>"; };
 		4579ECBF1DF17AD900CC88D8 /* 2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 2; path = Input/2; sourceTree = "<group>"; };
 		4579ECC01DF17AEC00CC88D8 /* Day2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +70,7 @@
 				4539CB431DF0B8A900644D72 /* main.swift */,
 				4539CB581DF0BA7900644D72 /* Day1.swift */,
 				4579ECC01DF17AEC00CC88D8 /* Day2.swift */,
+				4539CB721DF4089C00644D72 /* Day3.swift */,
 			);
 			name = Source;
 			path = AdventOfCode2016;
@@ -77,6 +81,7 @@
 			children = (
 				4539CB5A1DF0BC7600644D72 /* 1 */,
 				4579ECBF1DF17AD900CC88D8 /* 2 */,
+				4539CB711DF4085D00644D72 /* 3 */,
 			);
 			name = Input;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 			files = (
 				4539CB591DF0BA7900644D72 /* Day1.swift in Sources */,
 				4579ECC11DF17AEC00CC88D8 /* Day2.swift in Sources */,
+				4539CB731DF4089C00644D72 /* Day3.swift in Sources */,
 				4539CB441DF0B8A900644D72 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
