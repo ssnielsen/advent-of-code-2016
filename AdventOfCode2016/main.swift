@@ -32,7 +32,29 @@ func matches(for regex: String, in text: String) -> [String] {
     }
 }
 
-let input = loadInput(for: 3)!
+let input = loadInput(for: 4)!
 //let input = "ULL\nRRDDD\nLURDL\nUUUUD"
-let result = Day3().run(with: input)
+let result = Day4().run(with: input)
 print(result)
+
+
+/* TEMPLATE
+ struct Day4 {
+ func run(with input: String) -> (part1: String, part2: String) {
+ let splitted = input.components(separatedBy: .newlines).filter { !$0.isEmpty }
+
+ return (part1: part1(with: splitted), part2: part2(with: splitted))
+ }
+
+ func part1(with input: [String]) -> String {
+ var code = ""
+ return code
+ }
+
+ func part2(with input: [String]) -> String {
+ var code = ""
+ return code
+ }
+ }
+
+ */
