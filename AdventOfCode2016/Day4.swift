@@ -18,15 +18,25 @@ struct Day4 {
 
     func part1(with rooms: [Room]) -> String {
         let sumOfIds = rooms.reduce(0) { sum, room in
-            let countedLetters = room.name.map { namePart in
-                return (namePart.characters.first!, namePart.characters.count)
-            }
+            let countedLetters = room.name.characters.reduce([String:Int]()) { dict, letter in
+                    var newDict = dict
+                    let letterKey = String(letter)
+                    newDict[letterKey] = (newDict[letterKey] ?? 0) + 1
+                    return newDict
+                }
+                .sorted { kvp1, kvp2 in
+                    return kvp1.value < kvp2.value
+                }
             let sortedCountedLetters = countedLetters.sorted { x, y in
-                return x.1 < y.1
+                if x.value == y.value {
+                    return x.key < y.key
+                } else {
+                    return x.value > y.value
+                }
             }
-            let a = sortedCountedLetters[0..<5].map { $0.0 }.flatMap { $0 }
-
-            return sum + (String(a) == room.checksum ? room.sectorId : 0)
+            let mostAppearing = sortedCountedLetters[0..<5].map { $0.0 }.joined()
+            
+            return sum + (mostAppearing == room.checksum ? room.sectorId : 0)
         }
 
 
@@ -41,8 +51,8 @@ struct Day4 {
     func parse(with input: String) -> Room {
         var splitted = input.components(separatedBy: "[")
         var nameAndSectorId = splitted[0].components(separatedBy: "-")
-        let checksum = splitted[1]
-        let name = Array(nameAndSectorId[0..<(nameAndSectorId.count-1)])
+        let checksum = splitted[1].replacingOccurrences(of: "]", with: "")
+        let name = Array(nameAndSectorId[0..<(nameAndSectorId.count-1)]).joined()
         let sectorId = Int(nameAndSectorId.last!)!
 
         return Room(name: name, sectorId: sectorId, checksum: checksum)
@@ -50,7 +60,7 @@ struct Day4 {
 
 
     struct Room {
-        var name: [String]
+        var name: String
         var sectorId: Int
         var checksum: String
     }
