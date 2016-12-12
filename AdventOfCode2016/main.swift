@@ -32,9 +32,9 @@ func matches(for regex: String, in text: String) -> [String] {
     }
 }
 
-let input = loadInput(for: 5)!
-//let input = "eedadn\ndrvtee\neandsr\nraavrd\natevrs\ntsrnev\nsdttsa\nrasrtv\nnssdts\nntnada\nsvetve\ntesnvt\nvntsnd\nvrdear\ndvrsen\nenarar"
-let result = Day5().run(with: input)
+let input = loadInput(for: 7)!
+//let input = "abba[mnop]qrst\nabcd[bddb]xyyx\naaaa[qwer]tyui\nioxxoj[asdfgh]zxcvb\nabccba[qweasdzzxc]testewre[fffyttyaa]asgdsdad\nabccba[qweasdzzxc]testewre[fffyttreaa]asgdsdad"
+let result = Day7().run(with: input)
 print(result)
 
 
