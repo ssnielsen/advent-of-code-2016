@@ -9,7 +9,7 @@
 import Foundation
 
 struct Day7 {
-    func run(with input: String) -> (part1: Int, part2: String) {
+    func run(with input: String) -> (part1: Int, part2: Int) {
         let splitted = input.components(separatedBy: .newlines).filter { !$0.isEmpty }
 
         return (part1: part1(with: splitted), part2: part2(with: splitted))
@@ -20,25 +20,26 @@ struct Day7 {
         dump(supportingIps)
         return supportingIps.count
     }
-
-    func part2(with input: [String]) -> String {
-        var code = ""
-        return code
-    }
-
+    
     private func supportsTLS(ip: String) -> Bool {
-        return outsideSquares(ip: ip) && !insideSquares(ip: ip)
+        let abbaPattern = "(\\w)((?!\\1)\\w)\\2\\1"
+        return ip.contains(pattern: abbaPattern) && !ip.contains(pattern: "\\[\\w*\(abbaPattern)\\w*\\]")
     }
-
-    let abbaPattern = "(\\w)((?!\\1)\\w)\\2\\1"
-
-    private func outsideSquares(ip: String) -> Bool {
-        let pattern = abbaPattern
-        return ip.range(of: pattern, options: String.CompareOptions.regularExpression) != nil
+    
+    func part2(with input: [String]) -> Int {
+        let supportingIps = input.filter(supportsSSL)
+        dump(supportingIps)
+        return supportingIps.count
     }
+    
+    private func supportsSSL(ip: String) -> Bool {
+        let pattern = "(.)((?!\\1)\\w)\\1.*\\[.*\\2\\1\\2\\w*\\]|\\[\\w*(\\w)((?!\\3)\\w)\\3\\w*\\].*\\4\\3\\4"
+        return ip.contains(pattern: pattern)
+    }
+}
 
-    private func insideSquares(ip: String) -> Bool {
-        let pattern = "\\[\\w*\(abbaPattern)\\w*\\]"
-        return ip.range(of: pattern, options: String.CompareOptions.regularExpression) != nil
+private extension String {
+    func contains(pattern: String) -> Bool {
+        return self.range(of: pattern, options: String.CompareOptions.regularExpression) != nil
     }
 }

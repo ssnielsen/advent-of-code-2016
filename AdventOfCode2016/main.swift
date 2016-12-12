@@ -10,8 +10,8 @@ import Foundation
 
 func loadInput(for day: Int) -> String? {
     do {
-        //let path = "/Users/Soren/Developer/advent-of-code-2016/Input/\(day)"
-        let path = "/Users/soren/econ-source/advent-of-code-2016/Input/\(day)"
+        let path = "/Users/Soren/Developer/advent-of-code-2016/Input/\(day)"
+        //let path = "/Users/soren/econ-source/advent-of-code-2016/Input/\(day)"
         let input = try String(contentsOfFile: path, encoding: .utf8)
         return input
     } catch {
