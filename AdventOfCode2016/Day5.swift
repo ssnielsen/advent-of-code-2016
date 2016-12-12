@@ -11,22 +11,25 @@ import Foundation
 struct Day5 {
     func run(with input: String) -> (part1: String, part2: String) {
         let sanitized = input.trimmingCharacters(in: .whitespacesAndNewlines)
-        return (part1: part1(with: sanitized), part2: part2(with: sanitized))
+        return (part1: "", part2: part2(with: sanitized))
     }
+
+    let codeLength = 8
+    let fiveZeroes = "00000"
     
     func part1(with input: String) -> String {
         var code = ""
-        
         var index = 0
+
         while (true) {
             let hash = MD5String(string: "\(input)\(index)")
             
-            if hash.hasPrefix("00000") {
+            if hash.hasPrefix(fiveZeroes) {
                 code += hash[hash.index(hash.startIndex, offsetBy: 5)...hash.index(hash.startIndex, offsetBy: 5)]
                 print("Code is now \(code)")
             }
             
-            if code.characters.count == 8 {
+            if code.characters.count == codeLength {
                 break
             }
             
@@ -37,8 +40,30 @@ struct Day5 {
     }
     
     func part2(with input: String) -> String {
-        var code = ""
-        return code
+        var code: [String?] = Array(repeating: nil, count: codeLength)
+        var index = 0
+
+        while (true) {
+            let hash = MD5String(string: "\(input)\(index)")
+
+            if hash.hasPrefix(fiveZeroes) {
+                if let index = Int(hash[hash.index(hash.startIndex, offsetBy: 5)...hash.index(hash.startIndex, offsetBy: 5)]), index < codeLength, code[index] == nil {
+                    let character = hash[hash.index(hash.startIndex, offsetBy: 6)...hash.index(hash.startIndex, offsetBy: 6)]
+                    code[index] = character
+
+                    let readableCode = code.map { $0 ?? "-" }.joined()
+                    print("Code is now \(readableCode)")
+                }
+            }
+
+            if !code.contains(where: { $0 == nil }) {
+                break
+            }
+
+            index += 1
+        }
+
+        return code.flatMap { $0 }.joined()
     }
     
     private func MD5String(string: String) -> String {

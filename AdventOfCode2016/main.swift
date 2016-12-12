@@ -10,8 +10,8 @@ import Foundation
 
 func loadInput(for day: Int) -> String? {
     do {
-        let path = "/Users/Soren/Developer/advent-of-code-2016/Input/\(day)"
-        //let path = "/Users/soren/econ-source/advent-of-code-2016/Input/\(day)"
+        //let path = "/Users/Soren/Developer/advent-of-code-2016/Input/\(day)"
+        let path = "/Users/soren/econ-source/advent-of-code-2016/Input/\(day)"
         let input = try String(contentsOfFile: path, encoding: .utf8)
         return input
     } catch {
@@ -32,9 +32,9 @@ func matches(for regex: String, in text: String) -> [String] {
     }
 }
 
-let input = loadInput(for: 6)!
+let input = loadInput(for: 5)!
 //let input = "eedadn\ndrvtee\neandsr\nraavrd\natevrs\ntsrnev\nsdttsa\nrasrtv\nnssdts\nntnada\nsvetve\ntesnvt\nvntsnd\nvrdear\ndvrsen\nenarar"
-let result = Day6().run(with: input)
+let result = Day5().run(with: input)
 print(result)
 
 
