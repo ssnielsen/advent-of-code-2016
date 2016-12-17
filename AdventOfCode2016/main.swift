@@ -32,10 +32,12 @@ func matches(for regex: String, in text: String) -> [String] {
     }
 }
 
-let input = loadInput(for: 8)!
+let input = loadInput(for: 9)!
 //let input = "abba[mnop]qrst\nabcd[bddb]xyyx\naaaa[qwer]tyui\nioxxoj[asdfgh]zxcvb\nabccba[qweasdzzxc]testewre[fffyttyaa]asgdsdad\nabccba[qweasdzzxc]testewre[fffyttreaa]asgdsdad"
-//let input = "rect 3x2\nrotate column x=1 by 1\nrotate row y=0 by 4\nrotate column x=1 by 1"
-let result = Day8().run(with: input)
+//let input = "X(8x2)(3x3)ABCYTEST(2x2)XYFF(2x2)AC(3x3)KILT"
+//let input = "X(8x2)(3x3)ABCY"
+//let input = "(25x3)(3x3)ABC(2x3)XY(5x2)PQRSTX(18x9)(3x2)TWO(5x7)SEVEN"
+let result = Day9().run(with: input)
 print(result)
 
 
