@@ -16,10 +16,10 @@ struct Day6 {
     }
     
     func part1(with input: [String]) -> String {
-        var letterCounts = Array(repeating: [Character:Int](), count: input.first!.characters.count)
+        var letterCounts = Array(repeating: [Character:Int](), count: input.first!.count)
         
         for message in input {
-            for (index, letter) in message.characters.enumerated() {
+            for (index, letter) in message.enumerated() {
                 letterCounts[index][letter] = (letterCounts[index][letter] ?? 0) + 1
             }
         }
@@ -34,10 +34,10 @@ struct Day6 {
     }
     
     func part2(with input: [String]) -> String {
-        var letterCounts = Array(repeating: [Character:Int](), count: input.first!.characters.count)
+        var letterCounts = Array(repeating: [Character:Int](), count: input.first!.count)
         
         for message in input {
-            for (index, letter) in message.characters.enumerated() {
+            for (index, letter) in message.enumerated() {
                 letterCounts[index][letter] = (letterCounts[index][letter] ?? 0) + 1
             }
         }

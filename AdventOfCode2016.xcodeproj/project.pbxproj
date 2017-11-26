@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		451BFB1B1FCB533E007A547B /* Day 11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451BFB1A1FCB533E007A547B /* Day 11.swift */; };
 		452C490E1E09BA6C00334199 /* Day10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452C490D1E09BA6C00334199 /* Day10.swift */; };
 		4539CB441DF0B8A900644D72 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539CB431DF0B8A900644D72 /* main.swift */; };
 		4539CB591DF0BA7900644D72 /* Day1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539CB581DF0BA7900644D72 /* Day1.swift */; };
@@ -33,6 +34,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		451BFB1A1FCB533E007A547B /* Day 11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day 11.swift"; sourceTree = "<group>"; };
+		451BFB1C1FCB5354007A547B /* 11 */ = {isa = PBXFileReference; lastKnownFileType = text; name = 11; path = Input/11; sourceTree = "<group>"; };
 		452C490C1E09BA3F00334199 /* 10 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 10; path = Input/10; sourceTree = "<group>"; };
 		452C490D1E09BA6C00334199 /* Day10.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day10.swift; sourceTree = "<group>"; };
 		4539CB401DF0B8A900644D72 /* AdventOfCode2016 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AdventOfCode2016; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +103,7 @@
 				4571B90A1E05D3F7001E97DB /* Day8.swift */,
 				4571B90D1E05E3FF001E97DB /* Day9.swift */,
 				452C490D1E09BA6C00334199 /* Day10.swift */,
+				451BFB1A1FCB533E007A547B /* Day 11.swift */,
 				4539CB771DF6082700644D72 /* AdventOfCode2016-Bridging-Header.h */,
 			);
 			name = Source;
@@ -119,6 +123,7 @@
 				4571B9091E05D3C9001E97DB /* 8 */,
 				4571B90C1E05E3E9001E97DB /* 9 */,
 				452C490C1E09BA3F00334199 /* 10 */,
+				451BFB1C1FCB5354007A547B /* 11 */,
 			);
 			name = Input;
 			sourceTree = "<group>";
@@ -151,11 +156,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "sonderby Inc.";
 				TargetAttributes = {
 					4539CB3F1DF0B8A800644D72 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -209,6 +215,7 @@
 				4539CB791DF7368E00644D72 /* Day6.swift in Sources */,
 				4571B90B1E05D3F7001E97DB /* Day8.swift in Sources */,
 				4539CB441DF0B8A900644D72 /* main.swift in Sources */,
+				451BFB1B1FCB533E007A547B /* Day 11.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,7 +231,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -232,7 +241,12 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -273,7 +287,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -281,7 +297,12 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -302,6 +323,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/AdventOfCode2016/AdventOfCode2016-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -309,7 +331,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -317,7 +340,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

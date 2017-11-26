@@ -20,7 +20,7 @@ struct Day2 {
         var finger = 5
 
         for line in input {
-            for instruction in line.characters {
+            for instruction in line {
                 switch instruction {
                 case "R" where finger % 3 != 0: finger += 1
                 case "L" where finger % 3 != 1: finger -= 1
@@ -57,7 +57,7 @@ struct Day2 {
         ]
 
         for line in input {
-            for instruction in line.characters {
+            for instruction in line {
                 guard let move = moves[String(instruction)] else {
                     print("ERROR. Could not find move")
                     continue

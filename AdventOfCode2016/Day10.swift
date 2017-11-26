@@ -16,12 +16,12 @@ struct Day10 {
     }
     
     func part1(with input: [String]) -> String {
-        var code = ""
+        let code = ""
         return code
     }
     
     func part2(with input: [String]) -> String {
-        var code = ""
+        let code = ""
         return code
     }
     

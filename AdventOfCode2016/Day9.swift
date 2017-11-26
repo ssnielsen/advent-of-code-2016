@@ -32,28 +32,28 @@ struct Day9 {
         
         while true {
             guard let ruleRange = searchSpace.range(of: ruleRegex, options: .regularExpression) else {
-                let finalResult = (result + searchSpace.characters.count)
+                let finalResult = (result + searchSpace.count)
                 return finalResult
             }
             
-            let ruleString = searchSpace.substring(with: ruleRange)
+            let ruleString = String(searchSpace[ruleRange])
             
             let searchSpaceSplitted = searchSpace.components(separatedBy: ruleString)
             
             let beforeRule = searchSpaceSplitted.first!
-            result += beforeRule.characters.count
+            result += beforeRule.count
             
-            let ruleSearchSpace = searchSpace.substring(from: searchSpace.index(searchSpace.startIndex, offsetBy: (beforeRule + ruleString).characters.count))
+            let ruleSearchSpace = searchSpace[searchSpace.index(searchSpace.startIndex, offsetBy: (beforeRule + ruleString).count)...]
             
             let rules = matches(for: "\\d+", in: ruleString)
             let distance = Int(rules[0])!
             let repeated = Int(rules[1])!
-            let toRepeat = ruleSearchSpace.substring(to: ruleSearchSpace.index(ruleSearchSpace.startIndex, offsetBy: distance))
-            let repeatedString = String(repeating: toRepeat, count: repeated)
+            let toRepeat = ruleSearchSpace[..<ruleSearchSpace.index(ruleSearchSpace.startIndex, offsetBy: distance)]
+            let repeatedString = String(repeating: String(toRepeat), count: repeated)
             
-            result += (recursive ? decompress(string: repeatedString, recursive: recursive) : repeatedString.characters.count)
+            result += (recursive ? decompress(string: repeatedString, recursive: recursive) : repeatedString.count)
             
-            searchSpace = ruleSearchSpace.substring(from: ruleSearchSpace.index(ruleSearchSpace.startIndex, offsetBy: distance))
+            searchSpace = String(ruleSearchSpace[ruleSearchSpace.index(ruleSearchSpace.startIndex, offsetBy: distance)...])
         }
     }
 }

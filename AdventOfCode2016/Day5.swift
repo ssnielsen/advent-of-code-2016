@@ -29,7 +29,7 @@ struct Day5 {
                 print("Code is now \(code)")
             }
             
-            if code.characters.count == codeLength {
+            if code.count == codeLength {
                 break
             }
             
@@ -49,7 +49,7 @@ struct Day5 {
             if hash.hasPrefix(fiveZeroes) {
                 if let index = Int(hash[hash.index(hash.startIndex, offsetBy: 5)...hash.index(hash.startIndex, offsetBy: 5)]), index < codeLength, code[index] == nil {
                     let character = hash[hash.index(hash.startIndex, offsetBy: 6)...hash.index(hash.startIndex, offsetBy: 6)]
-                    code[index] = character
+                    code[index] = String(character)
 
                     let readableCode = code.map { $0 ?? "-" }.joined()
                     print("Code is now \(readableCode)")
