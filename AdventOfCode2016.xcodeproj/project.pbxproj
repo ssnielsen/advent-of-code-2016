@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452C490E1E09BA6C00334199 /* Day10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452C490D1E09BA6C00334199 /* Day10.swift */; };
 		4539CB441DF0B8A900644D72 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539CB431DF0B8A900644D72 /* main.swift */; };
 		4539CB591DF0BA7900644D72 /* Day1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539CB581DF0BA7900644D72 /* Day1.swift */; };
 		4539CB731DF4089C00644D72 /* Day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539CB721DF4089C00644D72 /* Day3.swift */; };
@@ -32,6 +33,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		452C490C1E09BA3F00334199 /* 10 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 10; path = Input/10; sourceTree = "<group>"; };
+		452C490D1E09BA6C00334199 /* Day10.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day10.swift; sourceTree = "<group>"; };
 		4539CB401DF0B8A900644D72 /* AdventOfCode2016 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AdventOfCode2016; sourceTree = BUILT_PRODUCTS_DIR; };
 		4539CB431DF0B8A900644D72 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		4539CB581DF0BA7900644D72 /* Day1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day1.swift; sourceTree = "<group>"; };
@@ -96,6 +99,7 @@
 				457BBA631DFEFA7A00810F34 /* Day7.swift */,
 				4571B90A1E05D3F7001E97DB /* Day8.swift */,
 				4571B90D1E05E3FF001E97DB /* Day9.swift */,
+				452C490D1E09BA6C00334199 /* Day10.swift */,
 				4539CB771DF6082700644D72 /* AdventOfCode2016-Bridging-Header.h */,
 			);
 			name = Source;
@@ -114,6 +118,7 @@
 				457BBA621DFEFA6600810F34 /* 7 */,
 				4571B9091E05D3C9001E97DB /* 8 */,
 				4571B90C1E05E3E9001E97DB /* 9 */,
+				452C490C1E09BA3F00334199 /* 10 */,
 			);
 			name = Input;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 				4539CB731DF4089C00644D72 /* Day3.swift in Sources */,
 				4539CB751DF6074300644D72 /* Day5.swift in Sources */,
 				4571B90E1E05E3FF001E97DB /* Day9.swift in Sources */,
+				452C490E1E09BA6C00334199 /* Day10.swift in Sources */,
 				4539CB791DF7368E00644D72 /* Day6.swift in Sources */,
 				4571B90B1E05D3F7001E97DB /* Day8.swift in Sources */,
 				4539CB441DF0B8A900644D72 /* main.swift in Sources */,
